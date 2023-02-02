@@ -2,6 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { theme } from "@chakra-ui/theme";
 import { getThemingArgTypes } from "@chakra-ui/storybook-addon";
 import Button from "components/Button";
+import { HStack } from "@chakra-ui/react";
 
 export default {
   title: "Components / Button",
@@ -25,3 +26,23 @@ Secondary.args = {
   children: "Button",
   colorScheme: "gray",
 };
+
+export const WithVariants = () => (
+  <HStack spacing="24px">
+    <Button colorScheme="teal" variant="solid">
+      Button
+    </Button>
+    <Button colorScheme="teal" variant="outline">
+      Button
+    </Button>
+    <Button colorScheme="teal" variant="ghost">
+      Button
+    </Button>
+    <Button colorScheme="teal" variant="link">
+      Button
+    </Button>
+    <Button colorScheme="teal" variant="unstyled">
+      Button
+    </Button>
+  </HStack>
+);
